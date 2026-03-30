@@ -146,3 +146,89 @@ footer {
         align-items: center;
     }
 }
+
+/* ── Clubs page (club categories) ── */
+.clubs-page main {
+    padding: 2rem 0;
+}
+
+.clubs-intro {
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    max-width: 900px;
+    text-align: center;
+    background-color: #e6f0ff;
+    border-radius: 8px;
+}
+
+.clubs-intro h2 {
+    color: #004080;
+    margin-bottom: 0.75rem;
+}
+
+.club-categories {
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.category-card {
+    background-color: #fff;
+    padding: 1.5rem 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 64, 0.12);
+    border: 1px solid rgba(0, 64, 128, 0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 64, 0.18);
+}
+
+.category-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+}
+
+.category-card h3 {
+    color: #003366;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.category-card p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.55;
+}
+
+@media (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .clubs-intro {
+        text-align: left;
+    }
+}
