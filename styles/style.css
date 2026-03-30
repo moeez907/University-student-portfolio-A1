@@ -147,6 +147,459 @@ footer {
     }
 }
 
+
+/* =============================
+   HIGHLIGHTS PAGE STYLING
+============================= */
+/* ============================================================
+   highlights.css  —  Styles for highlights.html ONLY
+   ALL classes prefixed with "hl-" → zero conflict with style.css
+   Author  : Member 4 (Nurooz Amin)
+   Theme   : Matches lead's navy + light-blue design
+   ============================================================ */
+
+/* ── Variables (copied from lead's color scheme) ── */
+:root {
+  --hl-navy:        #003366;
+  --hl-blue:        #1a6fd4;
+  --hl-blue-light:  #cce0ff;
+  --hl-bg:          #f0f4f8;
+  --hl-bg-grey:     #e8f0fa;
+  --hl-white:       #ffffff;
+  --hl-text:        #003366;
+  --hl-muted:       #444444;
+  --hl-border:      #b3ccee;
+  --hl-radius:      8px;
+}
+
+/* ════════════════════════════════════════
+   HEADER  — dark navy banner (same as lead)
+════════════════════════════════════════ */
+.hl-header {
+  background-color: var(--hl-navy);
+  color: var(--hl-white);
+  padding: 2rem 5%;
+  text-align: left;
+}
+
+.hl-header__title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+.hl-header__sub {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ════════════════════════════════════════
+   NAVIGATION — dark nav bar (same as lead)
+════════════════════════════════════════ */
+.hl-nav {
+  background-color: #002244;
+  padding: 0 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.hl-nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.hl-nav__list li a {
+  display: block;
+  color: var(--hl-white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 1rem 1.8rem;
+  transition: background 0.2s;
+}
+
+.hl-nav__list li a:hover {
+  background-color: var(--hl-blue);
+}
+
+.hl-nav__active {
+  background-color: var(--hl-blue) !important;
+}
+
+/* ════════════════════════════════════════
+   STATS BAR
+════════════════════════════════════════ */
+.hl-stats {
+  display: flex;
+  justify-content: center;
+  background-color: var(--hl-navy);
+  flex-wrap: wrap;
+}
+
+.hl-stats__item {
+  flex: 1;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  min-width: 140px;
+}
+
+.hl-stats__item:last-child {
+  border-right: none;
+}
+
+.hl-stats__number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--hl-white);
+}
+
+.hl-stats__label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ════════════════════════════════════════
+   SECTIONS — same light-blue bg as lead
+════════════════════════════════════════ */
+.hl-section {
+  padding: 3rem 5%;
+  background-color: var(--hl-bg);
+}
+
+.hl-grey {
+  background-color: var(--hl-bg-grey);
+}
+
+.hl-section__title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--hl-navy);
+  margin-bottom: 1.8rem;
+}
+
+/* ════════════════════════════════════════
+   INTRO TEXT
+════════════════════════════════════════ */
+.hl-intro__text {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: var(--hl-muted);
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* ════════════════════════════════════════
+   ACHIEVEMENT CARDS  (3 per row like lead)
+════════════════════════════════════════ */
+.hl-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hl-card {
+  background: var(--hl-white);
+  border: 1px solid var(--hl-border);
+  border-top: 4px solid var(--hl-blue);
+  border-radius: var(--hl-radius);
+  padding: 1.5rem;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.hl-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 51, 102, 0.12);
+  transform: translateY(-4px);
+}
+
+.hl-card__icon {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+.hl-card__badge {
+  display: inline-block;
+  background-color: var(--hl-blue-light);
+  color: var(--hl-navy);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 0.7rem;
+}
+
+.hl-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--hl-navy);
+  margin-bottom: 0.5rem;
+}
+
+.hl-card__desc {
+  font-size: 0.88rem;
+  color: var(--hl-muted);
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+}
+
+.hl-card__date {
+  font-size: 0.8rem;
+  color: var(--hl-blue);
+  font-weight: 600;
+}
+
+/* ════════════════════════════════════════
+   TIMELINE
+════════════════════════════════════════ */
+.hl-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.hl-timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--hl-blue);
+  border-radius: 3px;
+}
+
+.hl-timeline__item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.hl-timeline__dot {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  border-radius: 50%;
+  background: var(--hl-navy);
+  border: 3px solid var(--hl-white);
+  outline: 2px solid var(--hl-blue);
+  margin-top: 0.3rem;
+  position: absolute;
+  left: -1.7rem;
+}
+
+.hl-timeline__content {
+  background: var(--hl-white);
+  border: 1px solid var(--hl-border);
+  border-left: 4px solid var(--hl-blue);
+  border-radius: var(--hl-radius);
+  padding: 1rem 1.5rem;
+  flex: 1;
+}
+
+.hl-timeline__year {
+  display: inline-block;
+  background: var(--hl-navy);
+  color: var(--hl-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.15rem 0.7rem;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  margin-bottom: 0.4rem;
+}
+
+.hl-timeline__heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--hl-navy);
+  margin-bottom: 0.3rem;
+}
+
+.hl-timeline__text {
+  font-size: 0.88rem;
+  color: var(--hl-muted);
+  line-height: 1.7;
+}
+
+/* ════════════════════════════════════════
+   MEMBER SPOTLIGHTS
+════════════════════════════════════════ */
+.hl-spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hl-spotlight {
+  background: var(--hl-white);
+  border: 1px solid var(--hl-border);
+  border-radius: var(--hl-radius);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.hl-spotlight:hover {
+  box-shadow: 0 6px 20px rgba(0, 51, 102, 0.1);
+  transform: translateY(-3px);
+}
+
+.hl-spotlight__avatar {
+  width: 60px;
+  height: 60px;
+  background-color: var(--hl-blue-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin: 0 auto 0.8rem;
+  border: 2px solid var(--hl-blue);
+}
+
+.hl-spotlight__name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--hl-navy);
+  margin-bottom: 0.2rem;
+}
+
+.hl-spotlight__role {
+  font-size: 0.78rem;
+  color: var(--hl-blue);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.hl-spotlight__desc {
+  font-size: 0.82rem;
+  color: var(--hl-muted);
+  line-height: 1.6;
+}
+
+/* ════════════════════════════════════════
+   CTA BANNER
+════════════════════════════════════════ */
+.hl-cta {
+  background-color: var(--hl-navy);
+  text-align: center;
+  padding: 3.5rem 5%;
+}
+
+.hl-cta__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--hl-white);
+  margin-bottom: 0.8rem;
+}
+
+.hl-cta__text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hl-cta__btn {
+  display: inline-block;
+  background-color: var(--hl-white);
+  color: var(--hl-navy);
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.hl-cta__btn:hover {
+  background-color: var(--hl-blue-light);
+  transform: translateY(-2px);
+}
+
+/* ════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════ */
+.hl-footer {
+  background-color: #001a33;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 1.5rem 5%;
+  font-size: 0.85rem;
+}
+
+/* ════════════════════════════════════════
+   MEDIA QUERIES — RESPONSIVE
+════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .hl-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hl-spotlight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hl-header__title {
+    font-size: 1.4rem;
+  }
+
+  .hl-nav__list {
+    flex-wrap: wrap;
+  }
+
+  .hl-nav__list li a {
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .hl-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hl-spotlight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hl-stats__item {
+    flex: 1 1 50%;
+  }
+
+  .hl-cta__title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hl-spotlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hl-stats__item {
+    flex: 1 1 100%;
+  }
+}
 /* ── Clubs page (club categories) ── */
 .clubs-page main {
     padding: 2rem 0;
